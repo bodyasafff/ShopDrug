@@ -10,6 +10,6 @@ namespace ShopDrug.Data
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Adresses> Adresses { get; set; }
+        public virtual Adresses Adresses { get; set; }
     }
 }

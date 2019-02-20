@@ -23,7 +23,7 @@ namespace ShopDrug
             InitializeComponent();
             using (var ctx = new Model1())
             {
-               
+                ctx.SaveChanges();
             }
         }
     }
