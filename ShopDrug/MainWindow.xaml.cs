@@ -18,12 +18,29 @@ namespace ShopDrug
 {
     public partial class MainWindow : Window
     {
+         
         public MainWindow()
         {
             InitializeComponent();
+
+                SelectCountry();
+        }
+        public void SelectCountry()
+        {
+           
             using (var ctx = new Model1())
             {
-                ctx.SaveChanges();
+                //ctx.Adressess.Add();
+                 var producers = ctx.Producers.ToList().Select(a => a.Adresses.Countries).Distinct().ToList();
+                lb.ItemsSource = producers;
+            }
+        }
+        public void SelectUserMaxSum()
+        {
+            using (var ctx = new Model1())
+            {
+                
+                
             }
         }
     }
